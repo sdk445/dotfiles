@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/Documents/screenshot
+
+file=~/Documents/screenshot/$(date +'%Y-%m-%d_%H-%M-%S').png
+maim -s "$file" && xclip -selection clipboard -t image/png "$file"
